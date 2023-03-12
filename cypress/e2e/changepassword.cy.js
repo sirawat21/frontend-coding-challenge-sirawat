@@ -17,11 +17,18 @@ describe("Change password page E2E test", () => {
     cy.get("p[name*='errorMessageofoldPasswordFormInput']").should('exist');
   });
 
-  it("Test show an error message when new-password form has invalid input", () => {
+  it("Test show an error message when new-password form has invalid input; input length < 8", () => {
     cy.get("#oldPasswordFormInput").type("something_value_of_old_password");
     cy.get("#newPasswordFormInput").type("abc123");
     cy.get('button[name*="primary"]').click();
     cy.get("p[name*='errorMessageofnewPasswordFormInput']").should('exist');
   });
+
+  it("Test show an error message when new-password form has invalid input; mix numbers and characters", () => {
+    cy.get("#oldPasswordFormInput").type("something_value_of_old_password");
+    cy.get("#newPasswordFormInput").type("abcdefghij");
+    cy.get('button[name*="primary"]').click();
+    cy.get("p[name*='errorMessageofnewPasswordFormInput']").should('exist');
+ });
 
 });
