@@ -21,7 +21,16 @@ const FormInput = ({ label, elementName, errorMessage, props }) => {
             peer\
         ",
         formInvalid:
-            "\
+            "w-full p-1 py-1.5 text-gray-600\
+            ring-pink-500 border-pink-500\
+            border-0 border-pink-500 rounded-md shadow-sm ring-1 ring-inset ring-gray-300\
+            hover:ring-pink-500\
+            focus:outline-none\
+            focus:ring-1\
+            focus:ring-inset\
+            focus:ring-pink-600\
+            focus:invalid\
+            peer\
         ",
     }
     return(
@@ -31,7 +40,7 @@ const FormInput = ({ label, elementName, errorMessage, props }) => {
                 id={elementName}
                 name={elementName}
                 aria-label={label}
-                className={formInputStyle["form"]}
+                className={errorMessage && formInputStyle["formInvalid"] || formInputStyle["form"]}
                 {...props}/>
             {/* Label */}
             <label 
