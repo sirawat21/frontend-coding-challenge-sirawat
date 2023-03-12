@@ -26,18 +26,25 @@ const FormInput = ({ label, elementName, errorMessage, props }) => {
     }
     return(
         <div className="relative mt-9">
+            {/* Input */}
             <input
                 id={elementName}
                 name={elementName}
                 aria-label={label}
                 className={formInputStyle["form"]}
                 {...props}/>
+            {/* Label */}
             <label 
                 htmlFor={elementName}
                 className={formInputStyle["label"]}>
                 {label}
             </label>
-            <p className={formInputStyle["errorMessage"]}>ErrorMessage</p>
+            {/* Error Message */}
+            <p 
+                name={"errorMessageof" + elementName}
+                className={formInputStyle["errorMessage"]}>
+                {errorMessage}
+            </p>
         </div>
     );
 };
