@@ -2,6 +2,8 @@ const FormInput = ({ label, elementName, ariaLabel, props }) => {
     const formInputStyle = {
         label: 
             "text-md text-gray-900\
+            absolute left-1 -top-6\
+            transition-all\
         ",
         errorMessage:
             "text-pink-600 text-xs\
@@ -20,7 +22,7 @@ const FormInput = ({ label, elementName, ariaLabel, props }) => {
         ",
     }
     return(
-        <>
+        <div className="relative mt-9">
             <input
                 id={elementName}
                 name={elementName}
@@ -33,7 +35,7 @@ const FormInput = ({ label, elementName, ariaLabel, props }) => {
                 {label}
             </label>
             <p className={formInputStyle["errorMessage"]}>ErrorMessage</p>
-        </>
+        </div>
     );
 };
 export default FormInput;
