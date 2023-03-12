@@ -1,4 +1,4 @@
-const Button = ({ buttonType, children, props }) => {
+const Button = ({ buttonType, ariaLabel, children, props }) => {
     const buttonStyle = {
         default: 
             "rounded-md bg-white py-2 px-3 text-sm font-helvetica text-gray-500 shadow-sm\
@@ -19,8 +19,9 @@ const Button = ({ buttonType, children, props }) => {
         ",
     }
     return(
-        <button  
+        <button
             name={buttonType}
+            aria-label={ariaLabel}
             className={buttonStyle[buttonType]}
             {...props}>
             {children}
