@@ -8,8 +8,18 @@ function App() {
   const [newPassword, setNewPassword] = useState("");
 
   /*** Functions ***/
-  /* Validate function submit */
-  const validateChangePassword = (event) => alert(0);
+  /* Validate submit form for change password */
+  const validateChangePassword = (event) => {
+    event.preventDefault();
+    // Validate old password
+    if (oldPassword.trim().length < 8) {
+      console.log('error: old password');
+    } else { 
+      console.log('valid: old password');
+    }
+    // Validate new password
+    // When valide input
+  }
 
   /*** Render ***/
   return (
@@ -34,7 +44,12 @@ function App() {
                 label={"Old Password"}
                 ariaLabel={"Old Password"}
                 elementName={"oldPasswordFormInput"}
-                placeholder="Old Password"/>
+                placeholder="Old Password"
+                props={
+                  {
+                    onChange: (event) => setOldPassword(event.target.value),
+                  }
+                }/>
             </div>
 
             {/* Grid Row[3]; Form input new password  */}
@@ -43,7 +58,11 @@ function App() {
                 label={"New Password"}
                 ariaLabel={"New Password"}
                 elementName={"newPasswordFormInput"}
-                placeholder="New Password"/>
+                props={
+                  {
+                    onChange: (event) => setNewPassword(event.target.value),
+                  }
+                }/>
             </div>
 
             {/* Grid Row[4]; Form input confirm password  */}
