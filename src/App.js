@@ -9,7 +9,7 @@ function App() {
 
   /*** Functions ***/
   /* Validate function submit */
-  const validateChangePassword = () => 0;
+  const validateChangePassword = (event) => alert(0);
 
   /*** Render ***/
   return (
@@ -71,7 +71,12 @@ function App() {
                 <div className="desktop:relative mobile:absolute mobile:right-0">
                   <Button 
                     ariaLabel={"Change password button"}
-                    buttonType="primary">
+                    buttonType="primary"
+                    props={
+                      {
+                        onClick: validateChangePassword,
+                      }
+                    }>
                     Change Password
                   </Button>
                 </div>
