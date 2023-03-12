@@ -46,16 +46,18 @@ function App() {
 
             {/* Grid Row[5]; Buttons */}
             <div className="col-span-1">
-              {/* Flex Box; Inline direction */}
-              <div className="flex">
-                <div>
+              {/* Flex Box; Grouping buttons inline direction */}
+              <div className="flex relative">
+                {/* Cancel Button */}
+                <div className="mr-1">
                   <Button 
                     ariaLabel={"Cancel button"}
                     buttonType="default">
                     Cancel
                   </Button>
                 </div>
-                <div>
+                {/* Change Password Button */}
+                <div className="desktop:relative mobile:absolute mobile:right-0">
                   <Button 
                     ariaLabel={"Change password button"}
                     buttonType="primary">
