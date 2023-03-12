@@ -8,8 +8,8 @@ function App() {
   const [newPassword, setNewPassword] = useState("");
 
   /* Form input status hooks */
-  const [isFormOldPasswordValid, setIsFormOldPasswordValid] = useState(true);
-  const [isFormNewPasswordValid, setIsFormNewPasswordValid] = useState(true);
+  const [isFormOldPasswordValid, setIsFormOldPasswordValid] = useState();
+  const [isFormNewPasswordValid, setIsFormNewPasswordValid] = useState();
 
   /* Form input error message hooks */
   const [errorMessageOldPassword, setErorMessageOldPassword] = useState("");
@@ -65,7 +65,6 @@ function App() {
       // alert a success message
       alert("Change Password Success");
     }
-
   } // End of validateChangePassword function
 
   /*** Render ***/
