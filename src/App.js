@@ -39,7 +39,10 @@ function App() {
     }
     // When valide input
     if (isFormOldPasswordValid === true && isFormNewPasswordValid === true) {
-      // all valid then alert message
+      // clear all state of previous inputs 
+      setOldPassword("");
+      setNewPassword("");
+      // alert a success message
       alert("Change Password Success");
     }
   } // End of validateChangePassword function //
