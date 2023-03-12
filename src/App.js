@@ -3,9 +3,12 @@ import { Button, FormInput } from "./components";
 
 function App() {
   /*** States ****/
-  /* HookForm input hooks */
+  /* Form input value hooks */
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  /* Form input valid status hooks */
+  const [isFormOldPasswordValid, setIsFormOldPasswordValid] = useState(true);
+  const [isFormNewPasswordValid, setIsFormNewPasswordValid] = useState(true);
 
   /*** Functions ***/
   /* Validate submit form for change password */
@@ -14,22 +17,32 @@ function App() {
     /* Validate old password */ 
     // the input must not empty, input > 8
     if (oldPassword.trim().length < 8) {
-      // if invalid
+      // if invalid set the status of old password form to Flase
+      setIsFormOldPasswordValid(false);
       console.log('error: old password');
-    } else { 
+    } else {
+      // if valid set the status of old password form to True 
+      setIsFormOldPasswordValid(true);
       console.log('valid: old password');
     }
     /* Validate new password */
     // the input must not empty, input > 8, and mixture of numbers and letters
     const regx = new RegExp(/^(?=.*[a-z])(?=.*\d)[a-zA-Z0-9]+$/);
     if (newPassword.trim().length < 8 || !regx.test(newPassword)) {
-      // if invalid
+      // if invalid set the status of new password form to Flase
+      setIsFormNewPasswordValid(false);
       console.log('error: new password');
     } else {
+      // if valid set the status of new password form to True 
+      setIsFormNewPasswordValid(true);
       console.log('valid: new password');
     }
     // When valide input
-  }
+    if (isFormOldPasswordValid === true && isFormNewPasswordValid === true) {
+      // all valid then alert message
+      alert("Change Password Success");
+    }
+  } // End of validateChangePassword function //
 
   /*** Render ***/
   return (
