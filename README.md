@@ -3,7 +3,7 @@ This project is a frontend coding assignment aimed at demonstrating my front-end
 ## Live 
 |Host|URL|
 |---|---|
-|Firebase|http://universities.hipolabs.com/search?country=Australia|
+|Firebase|https://frontend-coding-challeng-9534d.web.app|
 ### Tasks
 - [x] Using React Hooks Components
 - [x] Using Cypress CI
