@@ -118,7 +118,7 @@ function App() {
             </div>
 
             {/* Grid Row[5]; Buttons */}
-            <div className="col-span-1">
+            <div className="col-span-1 mt-5">
               {/* Flex Box; Grouping buttons inline direction */}
               <div className="flex relative">
                 {/* Cancel Button */}
