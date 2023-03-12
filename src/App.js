@@ -21,6 +21,7 @@ function App() {
             <div className="col-span-1">
               <FormInput 
                 label={"Old Password"}
+                ariaLabel={"Old Password"}
                 elementName={"oldPasswordFormInput"}
                 placeholder="Old Password"/>
             </div>
@@ -29,6 +30,7 @@ function App() {
             <div className="col-span-1">
               <FormInput 
                 label={"New Password"}
+                ariaLabel={"New Password"}
                 elementName={"newPasswordFormInput"}
                 placeholder="New Password"/>
             </div>
@@ -37,6 +39,7 @@ function App() {
             <div className="col-span-1">
               <FormInput
                 label={"Confirm Password"}
+                ariaLabel={"Confirm Password"}
                 elementName={"confirmPasswordFormInput"} 
                 placeholder="Confirm Password"/>
             </div>
@@ -46,10 +49,18 @@ function App() {
               {/* Flex Box; Inline direction */}
               <div className="flex">
                 <div>
-                  <Button buttonType="default">Cancel</Button>
+                  <Button 
+                    ariaLabel={"Cancel button"}
+                    buttonType="default">
+                    Cancel
+                  </Button>
                 </div>
                 <div>
-                  <Button buttonType="primary">Change Password</Button>
+                  <Button 
+                    ariaLabel={"Change password button"}
+                    buttonType="primary">
+                    Change Password
+                  </Button>
                 </div>
               </div>
             </div>
