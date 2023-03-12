@@ -32,13 +32,11 @@ function App() {
       setIsFormOldPasswordValid(false);
       // set error message for old password form
       setErorMessageOldPassword(errorMessage.formOldPassword);
-      console.log(errorMessage.formOldPassword);
     } else {
       // if valid set the status of old password form to True 
       setIsFormOldPasswordValid(true);
       // remove an error message of old password form
       errorMessageOldPassword !== "" && errorMessageOldPassword("");
-      console.log('valid: old password');
     }
 
     /* Validate new password */
@@ -49,7 +47,6 @@ function App() {
       setIsFormNewPasswordValid(false);
       // set error message for new password form
       setErorMessageNewPassword(errorMessage.formNewPassword);
-      console.log(errorMessage.formNewPassword);
     } else {
       // if valid set the status of new password form to True 
       setIsFormNewPasswordValid(true);
