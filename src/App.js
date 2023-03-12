@@ -11,13 +11,23 @@ function App() {
   /* Validate submit form for change password */
   const validateChangePassword = (event) => {
     event.preventDefault();
-    // Validate old password
+    /* Validate old password */ 
+    // the input must not empty, input > 8
     if (oldPassword.trim().length < 8) {
+      // if invalid
       console.log('error: old password');
     } else { 
       console.log('valid: old password');
     }
-    // Validate new password
+    /* Validate new password */
+    // the input must not empty, input > 8, and mixture of numbers and letters
+    const regx = new RegExp(/^(?=.*[a-z])(?=.*\d)[a-zA-Z0-9]+$/);
+    if (newPassword.trim().length < 8 || !regx.test(newPassword)) {
+      // if invalid
+      console.log('error: new password');
+    } else {
+      console.log('valid: new password');
+    }
     // When valide input
   }
 
