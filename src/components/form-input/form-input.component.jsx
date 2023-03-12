@@ -4,7 +4,7 @@ const FormInput = ({ props }) => {
             "text-md text-gray-900\
         ",
         errorMessage:
-            "text-xs\
+            "text-pink-600 text-xs\
         ",
         form:        
             "w-full p-1 py-1.5 text-gray-900\
