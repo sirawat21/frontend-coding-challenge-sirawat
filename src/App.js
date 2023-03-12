@@ -47,6 +47,7 @@ function App() {
                 placeholder="Old Password"
                 props={
                   {
+                    required: true,
                     onChange: (event) => setOldPassword(event.target.value),
                   }
                 }/>
@@ -60,6 +61,7 @@ function App() {
                 elementName={"newPasswordFormInput"}
                 props={
                   {
+                    required: true,
                     onChange: (event) => setNewPassword(event.target.value),
                   }
                 }/>
@@ -93,6 +95,7 @@ function App() {
                     buttonType="primary"
                     props={
                       {
+                        type: "submit",
                         onClick: validateChangePassword,
                       }
                     }>
