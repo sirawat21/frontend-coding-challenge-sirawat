@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button, FormInput } from "./components";
 
 function App() {
+  /* Set reference hook to form element */
+  const ref = useRef(null);
+
   /*** States ****/
   /* Form input value hooks */
   const [oldPassword, setOldPassword] = useState("");
@@ -62,7 +65,7 @@ function App() {
       setIsFormOldPasswordValid("");
       setIsFormOldPasswordValid("");
       // clear all form inputs
-      
+      ref.current.reset();
       // alert a success message
       alert("Change Password Success");
     }
@@ -71,7 +74,7 @@ function App() {
   /*** Render ***/
   return (
     <div className="mx-auto mt-10 w-[500px]">
-      <form>
+      <form ref={ref}>
         <fieldset>
           {/* Grid Table; contains 5 rows */}
           <div className="grid grid-row-5 grid-cols-1 p-1">
