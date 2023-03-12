@@ -11,7 +11,9 @@ function App() {
             {/* Grid Row[1]; Title */}
             <div className="col-span-1">
               <legend>
-                <p className="text-[30px]">Change Password</p>
+                <p aria-label="Change password form" className="text-[30px]">
+                  Change Password
+                </p>
               </legend>
             </div>
 
