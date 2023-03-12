@@ -2,12 +2,12 @@ import { Button, FormInput } from "./components";
 
 function App() {
   return (
-    <div>
+    <div className="mx-auto mt-10 w-[500px]">
       <form>
         <fieldset>
           {/* Grid Table; contains 5 rows */}
-          <div className="grid grid-row-5 grid-cols-1">
-            
+          <div className="grid grid-row-5 grid-cols-1 p-1">
+
             {/* Grid Row[1]; Title */}
             <div className="col-span-1">
               <legend>
