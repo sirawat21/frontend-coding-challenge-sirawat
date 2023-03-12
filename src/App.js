@@ -6,9 +6,20 @@ function App() {
   /* Form input value hooks */
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
-  /* Form input valid status hooks */
+
+  /* Form input status hooks */
   const [isFormOldPasswordValid, setIsFormOldPasswordValid] = useState(true);
   const [isFormNewPasswordValid, setIsFormNewPasswordValid] = useState(true);
+
+  /* Form input error message hooks */
+  const [errorMessageOldPassword, setErorMessageOldPassword] = useState("");
+  const [errorMessageNewPassword, setErorMessageNewPassword] = useState("");
+  // error messages
+  const errorMessage = {
+    formOldPassword: "The old password is required.",
+    formNewPassword:
+      "Invalid new password; 8 characters minimum, mixture of numbers and letters.",
+  };
 
   /*** Functions ***/
   /* Validate submit form for change password */
@@ -45,7 +56,7 @@ function App() {
       // alert a success message
       alert("Change Password Success");
     }
-  } // End of validateChangePassword function //
+  } // End of validateChangePassword function
 
   /*** Render ***/
   return (
