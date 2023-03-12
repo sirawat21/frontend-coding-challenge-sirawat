@@ -11,4 +11,12 @@ describe("Change password page E2E test", () => {
     cy.get("p[name*='errorMessageofnewPasswordFormInput']").should('exist');
   });
 
+  /* Test show an error message when old password input is no value */
+  it('Testing show an error message when old password input is no value', () => {
+    cy.get("#oldPasswordFormInput").type(" ");
+    cy.get("#newPasswordFormInput").type("abcdd12345");
+    cy.get('button[name*="primary"]').click();
+    cy.get("p[name*='errorMessageofoldPasswordFormInput']").should('exist');
+  });
+
 });
