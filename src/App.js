@@ -17,38 +17,47 @@ function App() {
   // error messages
   const errorMessage = {
     formOldPassword: "The old password is required.",
-    formNewPassword:
-      "Invalid new password; 8 characters minimum, mixture of numbers and letters.",
+    formNewPassword: "Invalid new password; 8 characters minimum, mixture of numbers and letters.",
   };
 
   /*** Functions ***/
   /* Validate submit form for change password */
   const validateChangePassword = (event) => {
     event.preventDefault();
+
     /* Validate old password */ 
     // the input must not empty, input > 8
     if (oldPassword.trim().length < 8) {
       // if invalid set the status of old password form to Flase
       setIsFormOldPasswordValid(false);
-      console.log('error: old password');
+      // set error message for old password form
+      setErorMessageOldPassword(errorMessage.formOldPassword);
+      console.log(errorMessage.formOldPassword);
     } else {
       // if valid set the status of old password form to True 
       setIsFormOldPasswordValid(true);
+      // remove an error message of old password form
+      errorMessageOldPassword !== "" && errorMessageOldPassword("");
       console.log('valid: old password');
     }
+
     /* Validate new password */
     // the input must not empty, input > 8, and mixture of numbers and letters
     const regx = new RegExp(/^(?=.*[a-z])(?=.*\d)[a-zA-Z0-9]+$/);
     if (newPassword.trim().length < 8 || !regx.test(newPassword)) {
       // if invalid set the status of new password form to Flase
       setIsFormNewPasswordValid(false);
-      console.log('error: new password');
+      // set error message for new password form
+      setErorMessageNewPassword(errorMessage.formNewPassword);
+      console.log(errorMessage.formNewPassword);
     } else {
       // if valid set the status of new password form to True 
       setIsFormNewPasswordValid(true);
-      console.log('valid: new password');
+      // remove an error message of new password form
+      errorMessageNewPassword !== "" && setErorMessageNewPassword("");
     }
-    // When valide input
+
+    /* If all inputs are valid */
     if (isFormOldPasswordValid === true && isFormNewPasswordValid === true) {
       // clear all state of previous inputs 
       setOldPassword("");
@@ -56,6 +65,7 @@ function App() {
       // alert a success message
       alert("Change Password Success");
     }
+
   } // End of validateChangePassword function
 
   /*** Render ***/
