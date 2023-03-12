@@ -42,7 +42,6 @@ function App() {
             <div className="col-span-1">
               <FormInput 
                 label={"Old Password"}
-                ariaLabel={"Old Password"}
                 elementName={"oldPasswordFormInput"}
                 placeholder="Old Password"
                 props={
@@ -57,7 +56,6 @@ function App() {
             <div className="col-span-1">
               <FormInput 
                 label={"New Password"}
-                ariaLabel={"New Password"}
                 elementName={"newPasswordFormInput"}
                 props={
                   {
@@ -71,7 +69,6 @@ function App() {
             <div className="col-span-1">
               <FormInput
                 label={"Confirm Password"}
-                ariaLabel={"Confirm Password"}
                 elementName={"confirmPasswordFormInput"} 
                 placeholder="Confirm Password"/>
             </div>
