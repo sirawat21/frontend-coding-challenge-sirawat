@@ -4,6 +4,8 @@ const FormInput = ({ label, elementName, ariaLabel, props }) => {
             "text-md text-gray-900\
             absolute left-1 -top-6\
             transition-all\
+            peer-focus:text-orange-400\
+            peer-focus:text-md\
         ",
         errorMessage:
             "text-pink-600 text-xs\
@@ -16,6 +18,7 @@ const FormInput = ({ label, elementName, ariaLabel, props }) => {
             focus:ring-1\
             focus:ring-inset\
             focus:ring-orange-600\
+            peer\
         ",
         formInvalid:
             "\
