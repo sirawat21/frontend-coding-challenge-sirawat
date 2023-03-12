@@ -17,17 +17,26 @@ function App() {
 
             {/* Grid Row[2]; Form input old password */}
             <div className="col-span-1">
-              <FormInput placeholder="Old Password" />
+              <FormInput 
+                label={"Old Password"}
+                elementName={"oldPasswordFormInput"}
+                placeholder="Old Password"/>
             </div>
 
             {/* Grid Row[3]; Form input new password  */}
             <div className="col-span-1">
-              <FormInput placeholder="New Password" />
+              <FormInput 
+                label={"New Password"}
+                elementName={"newPasswordFormInput"}
+                placeholder="New Password"/>
             </div>
 
             {/* Grid Row[4]; Form input confirm password  */}
             <div className="col-span-1">
-              <FormInput placeholder="Confirm Password" />
+              <FormInput
+                label={"Confirm Password"}
+                elementName={"confirmPasswordFormInput"} 
+                placeholder="Confirm Password"/>
             </div>
 
             {/* Grid Row[5]; Buttons */}
