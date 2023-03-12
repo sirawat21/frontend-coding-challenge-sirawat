@@ -1,4 +1,4 @@
-const FormInput = ({ props }) => {
+const FormInput = ({ label, elementName, props }) => {
     const formInputStyle = {
         label: 
             "text-md text-gray-900\
@@ -21,10 +21,16 @@ const FormInput = ({ props }) => {
     }
     return(
         <>
-            <input 
-            className={formInputStyle["form"]}
-            {...props}/>
-            <label className={formInputStyle["label"]}>Label</label>
+            <input
+                id={elementName}
+                name={elementName}
+                className={formInputStyle["form"]}
+                {...props}/>
+            <label 
+                htmlFor={elementName}
+                className={formInputStyle["label"]}>
+                {label}
+            </label>
             <p className={formInputStyle["errorMessage"]}>ErrorMessage</p>
         </>
     );
