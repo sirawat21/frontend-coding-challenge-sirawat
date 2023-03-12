@@ -87,7 +87,7 @@ function App() {
                 label={"Old Password"}
                 elementName={"oldPasswordFormInput"}
                 placeholder="Old Password"
-                errorMessage={''}
+                errorMessage={errorMessageOldPassword}
                 props={
                   {
                     required: true,
@@ -101,7 +101,7 @@ function App() {
               <FormInput 
                 label={"New Password"}
                 elementName={"newPasswordFormInput"}
-                errorMessage={''}
+                errorMessage={errorMessageNewPassword}
                 props={
                   {
                     required: true,
