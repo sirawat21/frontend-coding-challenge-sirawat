@@ -23,8 +23,8 @@ function App() {
         </div>
         {/* [5] Grid Row; Buttons */}
         <div className="col-span-1">
-          <Button>Cancel</Button>
-          <Button>Change Password</Button>
+          <Button buttonType="default">Cancel</Button>
+          <Button buttonType="primary">Change Password</Button>
         </div>
       </div>
     </div>
