@@ -1,4 +1,4 @@
-const FormInput = ({ label, elementName, props }) => {
+const FormInput = ({ label, elementName, errorMessage, props }) => {
     const formInputStyle = {
         label: 
             "text-md text-gray-900\

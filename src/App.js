@@ -87,6 +87,7 @@ function App() {
                 label={"Old Password"}
                 elementName={"oldPasswordFormInput"}
                 placeholder="Old Password"
+                errorMessage={''}
                 props={
                   {
                     required: true,
@@ -100,6 +101,7 @@ function App() {
               <FormInput 
                 label={"New Password"}
                 elementName={"newPasswordFormInput"}
+                errorMessage={''}
                 props={
                   {
                     required: true,
@@ -112,8 +114,7 @@ function App() {
             <div className="col-span-1">
               <FormInput
                 label={"Confirm Password"}
-                elementName={"confirmPasswordFormInput"} 
-                placeholder="Confirm Password"/>
+                elementName={"confirmPasswordFormInput"}/>
             </div>
 
             {/* Grid Row[5]; Buttons */}
