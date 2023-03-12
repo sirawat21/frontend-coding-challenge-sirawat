@@ -36,7 +36,7 @@ function App() {
       // if valid set the status of old password form to True 
       setIsFormOldPasswordValid(true);
       // remove an error message of old password form
-      errorMessageOldPassword !== "" && errorMessageOldPassword("");
+      errorMessageOldPassword !== "" && setErorMessageOldPassword("");
     }
 
     /* Validate new password */
@@ -59,6 +59,10 @@ function App() {
       // clear all state of previous inputs 
       setOldPassword("");
       setNewPassword("");
+      setIsFormOldPasswordValid("");
+      setIsFormOldPasswordValid("");
+      // clear all form inputs
+      
       // alert a success message
       alert("Change Password Success");
     }
