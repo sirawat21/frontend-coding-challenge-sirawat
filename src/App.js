@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { Button, FormInput } from "./components";
 
 function App() {
+  /*** States ****/
+  /* HookForm input hooks */
+  const [oldPassword, setOldPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+
+  /*** Functions ***/
+  /* Validate function submit */
+  const validateChangePassword = () => 0;
+
+  /*** Render ***/
   return (
     <div className="mx-auto mt-10 w-[500px]">
       <form>
