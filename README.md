@@ -1,6 +1,5 @@
 # Frontend Coding Challenge conclusion 
 [![Build Tests](https://github.com/sirawat21/frontend-coding-challenge-sirawat/actions/workflows/github-action-build.yml/badge.svg)](https://github.com/sirawat21/frontend-coding-challenge-sirawat/actions/workflows/github-action-build.yml)
-[![Cypress Tests](https://github.com/sirawat21/frontend-coding-challenge-sirawat/actions/workflows/github-action-cypress.yml/badge.svg)](https://github.com/sirawat21/frontend-coding-challenge-sirawat/actions/workflows/github-action-cypress.yml)
 
 This project is a frontend coding assignment aimed at demonstrating my front-end development skills. The objective is to develop a change password page using React and TailwindCSS, and to create E2E tests using Cypress to ensure the functionality of the page.
 ## Live 
