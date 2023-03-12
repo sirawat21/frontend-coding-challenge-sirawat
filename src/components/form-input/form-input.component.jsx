@@ -1,4 +1,4 @@
-const FormInput = ({ label, elementName, props }) => {
+const FormInput = ({ label, elementName, ariaLabel, props }) => {
     const formInputStyle = {
         label: 
             "text-md text-gray-900\
@@ -24,6 +24,7 @@ const FormInput = ({ label, elementName, props }) => {
             <input
                 id={elementName}
                 name={elementName}
+                aria-label={ariaLabel}
                 className={formInputStyle["form"]}
                 {...props}/>
             <label 
